@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Signup Slide Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 400px;
+      height: 500px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .form-container {
+      width: 200%;
+      height: 100%;
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .form-box {
+      width: 50%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input {
+      margin-bottom: 15px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #ff6600;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+      color: white;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: none;
+      border: none;
+      color: #007bff;
+      cursor: pointer;
+      font-size: 15px;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container" id="formContainer">
+      <!-- Login Form -->
+      <div class="form-box">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button>Login</button>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form-box">
+        <h2>Create Account</h2>
+        <input type="text" placeholder="Username" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Create Account</button>
+      </div>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSlide()">Switch to Signup / Login</button>
+  </div>
+
+  <script>
+    let isSignup = false;
+
+    function toggleSlide() {
+      const container = document.getElementById('formContainer');
+      isSignup = !isSignup;
+      container.style.transform = isSignup ? "translateX(-50%)" : "translateX(0)";
+    }
+  </script>
+</body>
+</html>

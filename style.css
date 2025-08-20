@@ -1,0 +1,85 @@
+*{
+    margin: 0px;
+    padding:0px;
+    background-color: black;
+    color: white;
+}
+header{
+    height:90px;
+    width:100%;
+    border-bottom: 2px solid white;
+}
+.navbar{
+    display: flex;
+}
+.logo{
+    height:89px;
+    width: 220px;
+    overflow: hidden;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login button{
+    font-size: 1.2vw;
+    position: relative;
+    top: 20px;
+    left: 1100px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FF6600;
+    padding: 1.1vw 2.1vw;
+    cursor: pointer;
+}
+.details{
+    display:flex;
+}
+.hero{
+    height: 600px;
+    width: 420px;
+    /* border: 2px solid white; */
+    display: flex;
+    position: relative;
+    top: 17px;
+    left: 900px;
+    background-size: cover;
+}
+.info{
+    height:500px;
+    width:700px;
+    /* border: 2px solid white; */
+    position:relative;
+    top:90px;
+    right:250px;
+}
+.info h2{
+    font-size: 2.5rem;
+    color:#D6C7AD;
+    position: relative;
+    top: 30px;
+}
+.info p{
+    font-size: 1.2rem;
+    position: relative;
+    top: 55px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.info button{
+    font-size: 1.2vw;
+    position: relative;
+    top:100px;
+    left: 200px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FF6600;
+    padding: 1.1vw 2.1vw;
+    cursor: pointer;
+}
+button:hover{
+    scale:1.2;
+}
+/* Responsive web  */
